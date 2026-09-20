@@ -1,0 +1,12 @@
+{
+  "name": "FixMyEPUB",
+  "short_name": "FixMyEPUB",
+  "description": "Private EPUB diagnostics and repair for Send to Kindle.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe4",
+  "theme_color": "#1f5a43",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

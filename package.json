@@ -1,0 +1,15 @@
+{
+  "name": "fixmyepub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Private, browser-based EPUB diagnostics and repair for Send to Kindle cover and delivery failures.",
+  "scripts": {
+    "start": "node dev-server.mjs",
+    "test": "node --check app.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

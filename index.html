@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fix Send to Kindle Cover &amp; EPUB Errors | FixMyEPUB</title>
+    <meta name="description" content="Fix missing Send to Kindle covers and diagnose EPUB delivery errors with a free, private browser tool. Your ebook stays on your device at every step." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#f4efe4" />
+    <link rel="canonical" href="https://fixmyepub.com/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:title" content="Fix Send to Kindle Cover &amp; EPUB Errors | FixMyEPUB" />
+    <meta property="og:description" content="Fix missing Kindle covers and diagnose EPUB delivery errors privately in your browser." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fixmyepub.com/" />
+    <meta property="og:site_name" content="FixMyEPUB" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://fixmyepub.com/assets/kindle-cover-after.jpg" />
+    <meta property="og:image:width" content="1448" /><meta property="og:image:height" content="1086" />
+    <meta property="og:image:alt" content="A Kindle-style library with the book cover restored after EPUB repair." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fix Send to Kindle Cover &amp; EPUB Errors | FixMyEPUB" />
+    <meta name="twitter:description" content="Fix missing Kindle covers and diagnose EPUB delivery errors privately in your browser." />
+    <meta name="twitter:image" content="https://fixmyepub.com/assets/kindle-cover-after.jpg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://fixmyepub.com/#website",
+            "url": "https://fixmyepub.com/",
+            "name": "FixMyEPUB",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://fixmyepub.com/#app",
+            "name": "FixMyEPUB",
+            "url": "https://fixmyepub.com/",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Any modern web browser",
+            "description": "A private browser-based tool that fixes missing Kindle covers and diagnoses EPUB format problems that cause Send to Kindle rejection.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "VideoObject",
+            "@id": "https://fixmyepub.com/#demo-video",
+            "name": "Send to Kindle: No Cover or Failed Upload? I Built a Fix",
+            "description": "A 57-second walkthrough showing how FixMyEPUB diagnoses and repairs missing Send to Kindle covers and EPUB upload failures privately in the browser.",
+            "thumbnailUrl": "https://fixmyepub.com/marketing/youtube-short/assets/youtube-thumbnail-built-tool-1280x720.jpg",
+            "uploadDate": "2026-09-20",
+            "duration": "PT57S",
+            "embedUrl": "https://www.youtube-nocookie.com/embed/EW7s3TvUfUg",
+            "contentUrl": "https://www.youtube.com/watch?v=EW7s3TvUfUg",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://fixmyepub.com/#faq-schema",
+            "mainEntity": [
+              { "@type": "Question", "name": "Can you guarantee my cover will appear on every Kindle?", "acceptedAnswer": { "@type": "Answer", "text": "No. FixMyEPUB repairs detectable EPUB problems, but Kindle apps, device firmware, download state and Amazon's conversion service can also affect thumbnails." } },
+              { "@type": "Question", "name": "Why did Send to Kindle reject my EPUB?", "acceptedAnswer": { "@type": "Answer", "text": "Common causes include invalid package XML, a malformed container, missing manifest resources, broken spine references or incorrect ZIP packaging." } },
+              { "@type": "Question", "name": "Do you upload or keep my ebook?", "acceptedAnswer": { "@type": "Answer", "text": "No. The EPUB is opened and rebuilt locally by your browser. It is not sent to FixMyEPUB or stored on a server." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="FixMyEPUB home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>FixMyEPUB</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#what-we-check">What we check</a>
+        <div class="nav-guides">
+          <a class="nav-guides-trigger" href="https://fixmyepub.com/guides/" aria-haspopup="true">Guides</a>
+          <div class="guides-menu" aria-label="Kindle troubleshooting guides">
+            <a href="https://fixmyepub.com/guides/send-to-kindle-epub-cover-reference/">EPUB cover failure reference<small>OPF examples + free test EPUB</small></a>
+            <a href="https://fixmyepub.com/guides/send-to-kindle-no-cover/">No cover after Send to Kindle<small>Grey or blank book thumbnail</small></a>
+            <a href="https://fixmyepub.com/guides/send-to-kindle-epub-rejected/">EPUB rejected<small>Package and delivery errors</small></a>
+            <a href="https://fixmyepub.com/guides/fix-epub-cover-metadata/">Fix EPUB cover metadata<small>EPUB 2 and EPUB 3 declarations</small></a>
+            <a class="guides-menu-all" href="https://fixmyepub.com/guides/">View all Send to Kindle guides →</a>
+          </div>
+        </div>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="#fixer">Check an EPUB <span aria-hidden="true">→</span></a>
+    </header>
+
+    <main id="main-content">
+      <section class="hero hero-intro-only">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> A tiny repair shop for Kindle readers</p>
+          <h1>Fix Send to Kindle<br />cover &amp; EPUB errors.</h1>
+          <p class="hero-intro">Diagnose grey covers and format problems that make Send to Kindle reject your book. Safe fixes happen entirely in your browser.</p>
+          <div class="hero-trust" aria-label="Product benefits">
+            <span><b>100%</b> browser-based</span>
+            <span><b>0</b> files uploaded</span>
+            <span><b>2</b> focused checks</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section" aria-labelledby="demo-title">
+        <div class="demo-heading">
+          <div>
+            <p class="kicker">57-second walkthrough</p>
+            <h2 id="demo-title">See the diagnosis<br />and repair in action.</h2>
+          </div>
+          <p>Watch a real EPUB move from upload to diagnosis, cover-metadata repair and a clean download—without leaving the page.</p>
+        </div>
+        <div class="video-embed" data-video-id="EW7s3TvUfUg">
+          <img src="/marketing/youtube-short/assets/youtube-thumbnail-built-tool-1280x720.jpg" width="1280" height="720" loading="lazy" decoding="async" alt="FixMyEPUB video cover showing a Send to Kindle missing-cover problem and the browser repair tool." />
+          <button class="video-trigger" type="button" aria-label="Play the FixMyEPUB Send to Kindle repair demo on this page">
+            <span class="play-disc" aria-hidden="true">▶</span>
+            <span class="video-copy"><strong>Watch the repair</strong><small>Plays here with YouTube privacy-enhanced mode</small></span>
+          </button>
+          <a class="video-fallback" href="https://www.youtube.com/watch?v=EW7s3TvUfUg" target="_blank" rel="noopener noreferrer">Open on YouTube ↗</a>
+        </div>
+      </section>
+
+      <section class="visual-proof" aria-labelledby="visual-proof-title">
+        <div class="visual-proof-heading">
+          <div>
+            <p class="kicker">The problem, made visible</p>
+            <h2 id="visual-proof-title">From grey document<br />to a real book cover.</h2>
+          </div>
+          <div>
+            <p>FixMyEPUB repairs the EPUB declarations that tell conversion services which image is the cover, then verifies the rebuilt file before download.</p>
+            <a href="#fixer">Check my cover metadata <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="comparison-grid">
+          <figure class="comparison-card before">
+            <div class="comparison-label"><span>Before</span><b>Generic grey document</b></div>
+            <img src="/assets/kindle-cover-before.jpg" width="1448" height="1086" loading="lazy" decoding="async" alt="E-reader library showing a blank grey document tile where an EPUB cover is missing." />
+            <figcaption>The artwork may exist, but Kindle cannot identify it as the cover.</figcaption>
+          </figure>
+          <figure class="comparison-card after">
+            <div class="comparison-label"><span>After</span><b>Cover correctly identified</b></div>
+            <img src="/assets/kindle-cover-after.jpg" width="1448" height="1086" loading="lazy" decoding="async" alt="The same e-reader library after repair, with a dark green botanical book cover restored." />
+            <figcaption>A repaired EPUB points both cover metadata styles to one valid image.</figcaption>
+          </figure>
+        </div>
+        <p class="comparison-note">Illustrative result. Amazon conversion, device firmware and cached thumbnails can still affect the final display.</p>
+
+        <div class="error-proof">
+          <div class="error-proof-copy">
+            <p class="kicker">Recognize this screen?</p>
+            <h3>Your EPUB uploads—then Send to Kindle says “Failed.”</h3>
+            <p>This is the other common Send to Kindle failure: the EPUB opens elsewhere, but its package or references do not pass the web uploader’s delivery checks.</p>
+            <a href="https://fixmyepub.com/guides/send-to-kindle-epub-rejected/">See why EPUBs get rejected <span aria-hidden="true">→</span></a>
+          </div>
+          <figure class="error-proof-image">
+            <img src="/assets/send-to-kindle-web-error-example.jpg" width="1448" height="1086" loading="lazy" decoding="async" alt="Illustrative Send to Kindle web uploader showing an EPUB file with a Failed status and a Try again action." />
+            <figcaption>Illustrative reconstruction of a typical Send to Kindle web upload failure; account details and filenames are fictional.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="fixer-section" id="fixer" aria-labelledby="fixer-title">
+        <div class="section-heading compact">
+          <p class="kicker">Private EPUB check</p>
+          <h2 id="fixer-title">Check the file behind the cover.</h2>
+          <p>Choose an EPUB to diagnose its cover metadata and the format issues most likely to block Send to Kindle delivery.</p>
+        </div>
+        <div class="tool-shell">
+          <div class="stepper" aria-label="Repair progress">
+            <div class="step active" data-step="1"><span>1</span><b>Choose EPUB</b></div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2"><span>2</span><b>Diagnose</b></div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3"><span>3</span><b>Download</b></div>
+          </div>
+
+          <div id="dropZone" class="drop-zone" tabindex="0" role="button" aria-describedby="dropHelp">
+            <input id="epubInput" type="file" accept=".epub,application/epub+zip" hidden />
+            <div class="drop-icon" aria-hidden="true"><span>EPUB</span><i>↑</i></div>
+            <h3>Drop your EPUB here</h3>
+            <p>or <button id="browseButton" class="text-button" type="button">choose a file</button> from your device</p>
+            <small id="dropHelp">Checks cover + delivery format · DRM-free EPUB · Under 100 MB</small>
+          </div>
+
+          <div id="workingState" class="working-state" hidden aria-live="polite">
+            <div class="scanner"><span></span></div>
+            <div><p class="kicker">Reading the package</p><h3 id="workingTitle">Inspecting your EPUB…</h3><p id="workingDetail">Looking for the cover image and its metadata.</p></div>
+          </div>
+
+          <div id="resultState" class="result-state" hidden aria-live="polite">
+            <div class="result-topline">
+              <div><p class="kicker">Diagnosis complete</p><h3 id="resultTitle">We found the cover.</h3></div>
+              <span id="resultBadge" class="result-badge">Repairable</span>
+            </div>
+            <p id="resultSummary" class="result-summary"></p>
+            <div id="diagnosticSummary" class="diagnostic-summary"></div>
+            <div id="checkList" class="check-list"></div>
+
+            <div id="coverUploadPanel" class="cover-upload" hidden>
+              <div><b>No usable cover image found</b><p>Add a JPG or PNG and we’ll wire it into the EPUB correctly.</p></div>
+              <label class="secondary-button">Choose cover image<input id="coverInput" type="file" accept="image/jpeg,image/png" hidden /></label>
+              <span id="coverFilename"></span>
+            </div>
+
+            <div class="result-actions">
+              <button id="repairButton" class="primary-button" type="button">Repair cover metadata <span>→</span></button>
+              <button id="startOverButton" class="secondary-button" type="button">Try another file</button>
+            </div>
+            <p id="resultNote" class="result-note"></p>
+          </div>
+
+          <div id="downloadState" class="download-state" hidden aria-live="polite">
+            <div class="success-seal">✓</div>
+            <p class="kicker">Repair complete</p>
+            <h3>Your repaired EPUB is ready.</h3>
+            <p id="downloadSummary">The cover metadata has been repaired in a new copy. Your original file was not changed.</p>
+            <button id="downloadButton" class="primary-button" type="button">Download repaired EPUB <span>↓</span></button>
+            <button id="repairAnotherButton" class="text-button standalone" type="button">Repair another book</button>
+          </div>
+        </div>
+        <p class="privacy-line"><span>◆</span> Your ebook never leaves this browser.</p>
+      </section>
+
+      <section class="problem-strip" aria-label="Common cover problem">
+        <div class="quote-mark">“</div>
+        <p>It has a cover in Calibre—but Kindle shows a grey tile, or rejects the file completely.</p>
+        <div class="answer"><span>Those are the two problems we check.</span><a href="#fixer">Diagnose my EPUB →</a></div>
+      </section>
+
+      <section class="explain-section" id="how-it-works">
+        <div class="section-heading">
+          <p class="kicker">Why it happens</p>
+          <h2>A readable EPUB can still fail Kindle’s checks.</h2>
+          <p>An EPUB is a package of XML, HTML and image files. Reading apps often forgive small structural mistakes; Amazon’s conversion system may hide the cover or reject the package instead.</p>
+        </div>
+        <div class="explain-grid">
+          <article><span class="article-number">01</span><div class="signal-block">COVER<small>image + metadata</small></div><h3>Find the grey-cover cause</h3><p>We verify that the artwork exists and that EPUB 2 and EPUB 3 both identify it correctly.</p></article>
+          <article><span class="article-number">02</span><div class="signal-block">DELIVERY<small>package + resources</small></div><h3>Find rejection blockers</h3><p>We check the container, required metadata, manifest targets, spine references and XML resources.</p></article>
+          <article><span class="article-number">03</span><div class="signal-block">REPAIR<small>rebuild + recheck</small></div><h3>Download a verified copy</h3><p>Safe fixes are written to a separate EPUB and checked again before the download is offered.</p></article>
+        </div>
+      </section>
+
+      <section class="checks-section" id="what-we-check">
+        <div class="checks-copy">
+          <p class="kicker">A focused diagnostic</p>
+          <h2>We check the EPUB.<br />We don’t blame the reader.</h2>
+          <p>Every result explains what was found, what can be safely changed, and when the problem is probably outside the EPUB.</p>
+          <a href="#fixer" class="inline-link">Run a private Send to Kindle check <span>→</span></a>
+        </div>
+        <div class="checks-list">
+          <div><span>✓</span><p><b>Embedded artwork</b><small>Is a cover image actually present in the archive?</small></p></div>
+          <div><span>✓</span><p><b>EPUB 2 cover metadata</b><small>Does the legacy cover tag point to a real manifest item?</small></p></div>
+          <div><span>✓</span><p><b>EPUB 3 cover property</b><small>Is the image explicitly marked with cover-image?</small></p></div>
+          <div><span>✓</span><p><b>File path and media type</b><small>Do references, capitalization and image types agree?</small></p></div>
+          <div><span>✓</span><p><b>Container and package structure</b><small>Is the EPUB packaged in the form Amazon expects?</small></p></div>
+          <div><span>✓</span><p><b>Manifest and spine references</b><small>Do declared resources and reading-order items actually exist?</small></p></div>
+          <div><span>✓</span><p><b>XML readability</b><small>Can the package and content documents be parsed safely?</small></p></div>
+        </div>
+      </section>
+
+      <section class="guides-section" id="guides">
+        <div class="section-heading">
+          <p class="kicker">Send to Kindle help</p>
+          <h2>Fix the problem you can actually see.</h2>
+          <p>Focused troubleshooting guides for missing covers, rejection emails and EPUB package errors.</p>
+        </div>
+        <div class="guide-grid">
+          <article>
+            <p class="guide-intent">Missing cover</p>
+            <h3><a href="https://fixmyepub.com/guides/send-to-kindle-no-cover/">Send to Kindle has no cover: what to check</a></h3>
+            <p>Learn why an EPUB can show a cover in Calibre but arrive on Kindle as a grey document.</p>
+            <a href="https://fixmyepub.com/guides/send-to-kindle-no-cover/">Read the cover guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article>
+            <p class="guide-intent">Delivery rejected</p>
+            <h3><a href="https://fixmyepub.com/guides/send-to-kindle-epub-rejected/">Why Send to Kindle rejected your EPUB</a></h3>
+            <p>Trace package, manifest, spine and XML problems behind Amazon’s generic rejection email.</p>
+            <a href="https://fixmyepub.com/guides/send-to-kindle-epub-rejected/">Read the rejection guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article>
+            <p class="guide-intent">EPUB metadata</p>
+            <h3><a href="https://fixmyepub.com/guides/fix-epub-cover-metadata/">How EPUB cover metadata works</a></h3>
+            <p>Understand EPUB 2 and EPUB 3 cover declarations without opening a code editor.</p>
+            <a href="https://fixmyepub.com/guides/fix-epub-cover-metadata/">Read the metadata guide <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+        <p class="guide-section-footer"><a href="https://fixmyepub.com/guides/">Browse all Send to Kindle guides and references <span aria-hidden="true">→</span></a></p>
+      </section>
+
+      <section class="faq-section" id="faq">
+        <div class="section-heading"><p class="kicker">Before you upload</p><h2>A few honest answers.</h2></div>
+        <div class="faq-list">
+          <details><summary>Can you guarantee my cover will appear on every Kindle?<span>+</span></summary><p>No. We can repair detectable problems inside the EPUB, but Kindle apps, device firmware, download state and Amazon’s conversion service can also affect thumbnails. If your EPUB is already healthy, we’ll tell you instead of making unnecessary changes.</p></details>
+          <details><summary>Why did Send to Kindle reject my EPUB?<span>+</span></summary><p>Common causes include invalid package XML, a malformed container, missing manifest resources, broken spine references or incorrect ZIP packaging. The diagnostic names the blocker it can prove without guessing.</p></details>
+          <details><summary>Do you upload or keep my ebook?<span>+</span></summary><p>No. The EPUB is opened and rebuilt locally by your browser. It is not sent to FixMyEPUB or stored on a server.</p></details>
+          <details><summary>Will this change the text or formatting?<span>+</span></summary><p>The cover repair only changes package metadata and, when necessary, the selected cover resource. It does not rewrite chapters or alter the prose.</p></details>
+          <details><summary>Does this remove DRM?<span>+</span></summary><p>No. FixMyEPUB is for DRM-free EPUB files you are allowed to modify. Encrypted or DRM-protected books are not supported.</p></details>
+          <details><summary>What should I do after downloading the repaired EPUB?<span>+</span></summary><p>Remove the old personal document from your Kindle library, then upload the repaired copy through Amazon’s Send to Kindle service. Duplicate copies may retain the old thumbnail.</p></details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div><p class="kicker">Before you send it again</p><h2>Fix the grey cover.<br />Catch the rejection.</h2></div>
+        <a class="primary-button anchor-button" href="#fixer">Check my EPUB <span>↑</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="https://fixmyepub.com/"><span class="brand-mark"><i></i><i></i><i></i></span><span>FixMyEPUB</span></a>
+      <p>Independent and not affiliated with Amazon. “Kindle” and “Send to Kindle” are used only to describe compatibility.</p>
+      <span><a href="https://fixmyepub.com/">Visit the live tool</a></span>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
